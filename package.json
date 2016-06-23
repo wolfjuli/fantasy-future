@@ -2,7 +2,7 @@
   "name": "fantasy-future",
   "version": "1.0.0",
   "description": "A Fantasy Land compatible Future Monad implementation",
-  "main": "src/future.js",
+  "main": "index.js",
   "scripts": {
   },
   "keywords": [
