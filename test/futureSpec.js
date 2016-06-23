@@ -1,5 +1,5 @@
-import chai from 'chai';
-import Future from '../src/main';
+let chai = require('chai');
+let Future = require('fantasy-future');
 
 let {expect} = chai;
 

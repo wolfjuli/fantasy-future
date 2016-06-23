@@ -2,14 +2,8 @@
   "name": "fantasy-future",
   "version": "1.0.0",
   "description": "A Fantasy Land compatible Future Monad implementation",
-  "main": "compiled/src/main.js",
+  "main": "src/future.js",
   "scripts": {
-    "prebuild": "if [ -d compiled/src ]; then rm -rf compiled/src; fi;",
-    "build": "babel --modules common src/ --out-dir compiled/src",
-    "prebuildtest": "if [ -d compiled/test ]; then rm -rf compiled/test; fi;",
-    "buildtest": "babel --modules common test/ --out-dir compiled/test",
-    "pretest": "npm run build; npm run buildtest",
-    "test": "mocha compiled/test"
   },
   "keywords": [
     "future",

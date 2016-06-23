@@ -1,4 +1,5 @@
-export default class Future {
+"use strict";
+class Future {
 
   constructor(action) {
     this.action = action;
@@ -48,3 +49,7 @@ Future.all = function(futs) {
          
   });
 }
+
+module.exports = {
+  Future
+};
