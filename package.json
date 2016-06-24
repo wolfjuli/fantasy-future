@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A Fantasy Land compatible Future Monad implementation",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
   "keywords": [
     "future",
     "monad",
@@ -10,6 +13,10 @@
     "fantasy-land"
   ],
   "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  },
   "peerDependencies": {
     "fantasy-land": "*"
   }

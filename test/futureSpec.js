@@ -1,7 +1,9 @@
-let chai = require('chai');
-let Future = require('fantasy-future');
+'use strict';
 
-let {expect} = chai;
+const chai = require('chai');
+const {Future} = require('../index.js');
+
+const {expect} = chai;
 
 describe('Future', function() {
   it('executes passed function only after a fork has been called', function(done){
@@ -63,6 +65,15 @@ describe('Future', function() {
               expect(data).to.equal(3);
               done();
             });
+  });
+
+  it('is apply', function(done) {
+    var f = Future.of(x => y => x + y).ap(Future.of(1)).ap(Future.of(2));
+    f.fork(e => {throw new Error('Error')},
+           data => {
+             expect(data).to.equal(3);
+             done();
+           });
   });
 
   it('is applicative', function(done) {

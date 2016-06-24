@@ -16,7 +16,7 @@ class Future {
   }
 
   [fl.ap](m) {
-    return this.chain(fn => m.chain(x => fn(x)));
+    return this.chain(fn => m.map(x => fn(x)));
   }
 
   [fl.chain](fn) {
