@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const fl = require('fantasy-land');
 
@@ -13,6 +13,10 @@ class Future {
 
   [fl.map](fn) {
     return this.chain(x => Future.of(fn(x)));
+  }
+
+  [fl.ap](m) {
+    return this.chain(fn => m.chain(x => fn(x)));
   }
 
   [fl.chain](fn) {
